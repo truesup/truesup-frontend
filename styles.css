@@ -85,3 +85,127 @@ body {
   --color-button-border: #484848;
   --color-accent: #377aff;
 }
+
+/* common styles */
+h2,
+h3 {
+  font-family: var(--font-family-base);
+  color: var(--color-hard-dark);
+  line-height: 1;
+}
+.button {
+  font-family: var(--font-family-accent);
+  font-weight: var(--font-weight-accent-bold);
+  font-size: 16px;
+  min-height: 54px;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid var(--color-light);
+  border-radius: 100px;
+  background-color: var(--color-hard-dark);
+  color: var(--color-light);
+}
+.section-divider {
+  margin: 0;
+  width: 100%;
+  border: 1px solid var(--color-button-border);
+  border-radius: 2px;
+  opacity: 0.3;
+}
+
+/* let`s go */
+body {
+  background-color: var(--color-light);
+  padding: 24px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 60px;
+}
+.header-logo {
+  font-family: var(--font-family-base);
+  color: var(--color-medium-dark);
+  font-size: 24px;
+  line-height: 1.5;
+}
+.header-menu-list {
+  font-family: var(--font-family-accent);
+  font-weight: var(--font-weight-accent-medium);
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 33px;
+}
+.header-menu-link {
+  text-decoration: none;
+  color: var(--color-medium-dark);
+  line-height: 1.6;
+}
+.is-current {
+  color: var(--color-hard-dark);
+}
+.about {
+  margin-inline: 120px 110px;
+  min-height: 90dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-container {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr 2fr;
+}
+.about-title {
+  font-weight: var(--font-weight-accent-regular);
+  font-size: 100px;
+}
+.about-info-main,
+.about-info-other {
+  font-family: var(--font-family-accent);
+}
+.about-info-main {
+  font-weight: var(--font-weight-accent-medium);
+  font-size: 32px;
+  line-height: 1.4;
+  padding-block: 6px 16px;
+}
+.about-info-other {
+  font-weight: var(--font-weight-accent-regular);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-medium-dark);
+}
+.about-info-buttons {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+.download-resume-button {
+  text-decoration: none;
+  font-weight: var(--font-weight-accent-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 26px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.download-resume-button:hover {
+  border: 1px solid var(--color-hard-dark);
+  background-color: var(--color-light);
+  color: var(--color-hard-dark);
+  scale: 1.02;
+}
+.linkedin-button,
+.github-button {
+  cursor: pointer;
+  transition: scale 0.3s ease;
+}
+.linkedin-button:hover,
+.github-button:hover {
+  scale: 1.03;
+}
