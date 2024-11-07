@@ -1,0 +1,87 @@
+/* fonts */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url(./fonts/BebasNeue-Regular.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url(./fonts/Manrope-Regular.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url(./fonts/Manrope-Medium.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url(./fonts/Manrope-Bold.woff2) format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* styles normalization */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
+}
+:where(dd[class]) {
+  margin-block: 0;
+}
+:where(ul[class]) {
+  list-style: none;
+}
+img {
+  display: block;
+}
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100%;
+  line-height: 1.5;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* variables */
+:root {
+  --font-family-base: 'Bebas Neue', sans-serif;
+  --font-family-accent: 'Manrope', sans-serif;
+  --font-weight-accent-regular: 400;
+  --font-weight-accent-medium: 500;
+  --font-weight-accent-bold: 700;
+
+  --color-light: #d3d7e7;
+  --color-hard-dark: #221831;
+  --color-medium-dark: #465779;
+  --color-button-border: #484848;
+  --color-accent: #377aff;
+}
