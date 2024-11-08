@@ -277,10 +277,47 @@ body {
 .download-resume-button,
 .linkedin-button,
 .github-button {
-  transition: scale var(--transition-duration) ease;
+  transition: var(--transition-duration) ease;
 }
 .download-resume-button:hover,
 .linkedin-button:hover,
 .github-button:hover {
-  scale: 1.01;
+  scale: 1.03;
+}
+
+.portfolio {
+  padding-top: 60px;
+  grid-template-columns: 1fr 2fr;
+  gap: 300px;
+}
+.portfolio-cards-container {
+  margin: 100px auto 60px;
+  max-width: 76%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 42px;
+}
+.portfolio-card-wrapper {
+  text-align: center;
+  width: 308px;
+  height: auto;
+  border-radius: 20px;
+  background-color: var(--color-hard-dark);
+  transition: var(--transition-duration) ease;
+}
+.portfolio-card-wrapper:hover {
+  scale: 1.02;
+}
+.portfolio-card-image {
+  width: 308px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.portfolio-card-description {
+  font-family: var(--font-family-accent);
+  font-weight: var(--font-weight-accent-medium);
+  color: var(--color-light);
+  font-size: 16px;
+  margin-block: 16px;
 }
