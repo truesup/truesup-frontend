@@ -33,3 +33,14 @@ document.querySelectorAll('.portfolio-card-wrapper').forEach((card) => {
     flipCardInner.classList.toggle('flipped');
   });
 });
+
+// burger menu
+document.addEventListener('DOMContentLoaded', () => {
+  const burgerMenuBtn = document.querySelector('.burger-menu-btn');
+  const menuList = document.querySelector('.header-menu-list');
+
+  burgerMenuBtn.addEventListener('click', () => {
+    menuList.classList.toggle('open');
+    burgerMenuBtn.classList.toggle('open');
+  });
+});
