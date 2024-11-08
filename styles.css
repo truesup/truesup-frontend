@@ -29,6 +29,11 @@
 *::after {
   box-sizing: border-box;
 }
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
 :where(ul, ol):where([class]) {
   padding-left: 0;
 }
@@ -99,77 +104,84 @@ body {
   display: grid;
 }
 .container-landing {
-  width: 100%;
-  padding-inline: 120px 110px;
+  padding-inline: 120px;
 }
 .container-section {
-  width: 100%;
   padding-inline: 120px 140px;
 }
 .section-title {
-  color: hard-dark;
+  font-family: var(--font-family-base);
+  color: var(--color-hard-dark);
 }
 .section-title-l {
-  font-family: base;
   font-size: 101px;
   line-height: 0.9;
 }
 .section-title-m {
-  font-family: base;
   font-size: 76px;
   line-height: 1;
 }
 .section-text {
-  font-family: accent;
+  font-family: var(--font-family-accent);
 }
 .section-text-xl {
-  font-weight: medium;
+  font-weight: var(--font-weight-accent-medium);
   font-size: 32px;
   line-height: 1.4;
-  color: hard-dark;
+  color: var(--color-hard-dark);
 }
 .section-text-l {
-  font-weight: medium;
+  font-weight: var(--font-weight-accent-medium);
   font-size: 24px;
   line-height: 1.4;
-  color: hard-dark;
+  color: var(--color-hard-dark);
 }
 .section-text-m {
-  font-weight: regular;
+  font-weight: var(--font-weight-accent-regular);
   font-size: 18px;
   line-height: 1.5;
-  color: medium-dark;
+  color: var(--color-medium-dark);
 }
 .section-text-s {
-  font-weight: medium;
+  font-weight: var(--font-weight-accent-medium);
   font-size: 16px;
   line-height: 1.6;
-  color: medium-dark;
+  color: var(--color-medium-dark);
 }
 .section-text-button {
-  font-weight: bold;
+  font-weight: var(--font-weight-accent-bold);
   font-size: 16px;
   line-height: 1;
-  color: light;
+  color: var(--color-light);
 }
 .skill-substrate-text {
-  font-weight: bold;
+  font-weight: var(--font-weight-accent-bold);
   font-size: 16px;
   line-height: 1;
-  color: hard dark;
+  color: var(--color-hard-dark);
+}
+.button {
+  padding: 12px 24px;
 }
 .button-btn {
-  background-color: hard-dark;
-  border: 1px solid light;
-  border-radius: 100px;
+  background-color: var(--color-hard-dark);
+  border: var(--border-light);
+  border-radius: var(--border-radius-button);
 }
 .button-btn:hover {
-  background-color: light;
-  color: hard-dark;
-  border: 1px solid hard-dark;
+  background-color: var(--color-light);
+  color: var(--color-hard-dark);
+  border: var(--border-dark);
 }
 .button-icon {
-  border-radius: 50%;
+  border-radius: var(--border-radius-icons);
+  background-color: var(--color-hard-dark);
+  height: 42px;
+  aspect-ratio: 1;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .skills-container {
   display: flex;
@@ -185,8 +197,8 @@ body {
 }
 .skill-substrate {
   padding: 20px 40px;
-  background-color: light;
-  border: 1px solid hard-dark;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-hard-dark);
 }
 .section-divider {
   margin: 0;
@@ -198,11 +210,14 @@ body {
 
 /* let`s go */
 body {
+  margin: 0;
+  padding: 18px;
+  overflow-x: hidden;
   font-family: var(--font-family-base);
   font-weight: normal;
   background-color: var(--color-light);
-  padding: 18px;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -228,4 +243,44 @@ body {
 }
 .is-current {
   color: var(--color-hard-dark);
+}
+
+.about {
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    'title main'
+    '. other'
+    '. buttons';
+  place-content: center;
+  min-height: 90dvh;
+}
+.about-title {
+  grid-area: title;
+}
+.about-info-main {
+  grid-area: main;
+  margin-bottom: 16px;
+}
+.about-info-other {
+  grid-area: other;
+  margin-bottom: 40px;
+}
+.about-info-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.download-resume-button {
+  text-decoration: none;
+}
+.download-resume-button,
+.linkedin-button,
+.github-button {
+  transition: scale var(--transition-duration) ease;
+}
+.download-resume-button:hover,
+.linkedin-button:hover,
+.github-button:hover {
+  scale: 1.01;
 }
