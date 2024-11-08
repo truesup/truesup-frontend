@@ -1,8 +1,10 @@
+// linkedIn is not working yet
 const linkedInBtn = document.querySelector('.linkedin-button');
 linkedInBtn.addEventListener('click', () => {
   alert('it`s not working yet, sorry');
 });
 
+// header menu
 const menuLinks = document.querySelectorAll('.header-menu-link');
 
 function updateCurrentMenuLink(event) {
@@ -22,4 +24,12 @@ function updateCurrentMenuLink(event) {
 
 menuLinks.forEach((link) => {
   link.addEventListener('click', updateCurrentMenuLink);
+});
+
+// portfolio cards flip for mobile
+document.querySelectorAll('.portfolio-card-wrapper').forEach((card) => {
+  card.addEventListener('click', () => {
+    const flipCardInner = card.querySelector('.flip-card-inner');
+    flipCardInner.classList.toggle('flipped');
+  });
 });
