@@ -166,6 +166,13 @@ body {
   line-height: 1;
   color: var(--color-hard-dark);
 }
+.company-name {
+  font-family: var(--font-family-accent);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-accent);
+}
 .button {
   padding: 12px 24px;
 }
@@ -318,6 +325,8 @@ body {
 }
 .download-resume-button {
   text-decoration: none;
+  height: 42px;
+  box-sizing: border-box;
 }
 .download-resume-button,
 .linkedin-button,
@@ -333,6 +342,9 @@ body {
 .portfolio {
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
+}
+.portfolio-text {
+  max-width: 600px;
 }
 .portfolio-cards-container {
   margin: 80px auto 60px;
@@ -394,9 +406,12 @@ body {
 
 .skills {
   grid-template-columns: repeat(2, auto);
-  gap: 220px;
-  /* justify-content: space-between; */
+  /* gap: 220px; */
+  justify-content: space-between;
   margin-bottom: 60px;
+}
+.skills-container {
+  max-width: 600px;
 }
 .skills-container-substrates {
   display: flex;
@@ -414,6 +429,31 @@ body {
 }
 .skill-substrate:hover {
   scale: 1.02;
+}
+
+.experience {
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.experience-container-wrapper {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.experience-container-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.experience-text {
+  text-align: justify;
 }
 
 /* media */
