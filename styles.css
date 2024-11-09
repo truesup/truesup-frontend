@@ -169,7 +169,7 @@ body {
 .company-name {
   font-family: var(--font-family-accent);
   font-weight: 600;
-  font-size: 18px;
+  font-size: clamp(16px, 1.5vw, 18px);
   line-height: 1.6;
   color: var(--color-accent);
 }
@@ -465,6 +465,16 @@ body {
   .portfolio-cards-container {
     row-gap: 28px;
   }
+  .experience {
+    column-gap: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .portfolio,
+  .skills,
+  .experience {
+    column-gap: 60px;
+  }
 }
 @media (max-width: 1100px) {
   .container-landing,
@@ -486,10 +496,18 @@ body {
   }
 }
 @media (max-width: 850px) {
-  .skills {
+  .portfolio,
+  .skills,
+  .experience {
     display: flex;
     flex-direction: column;
     gap: 40px;
+  }
+  .skills-container-substrates {
+    width: calc(100dvw - 36px);
+  }
+  .experience-container-wrapper {
+    max-width: 100%;
   }
 }
 @media (max-width: 800px) {
@@ -517,12 +535,11 @@ body {
   .about-title {
     margin-bottom: 30px;
   }
-  .portfolio {
-    display: flex;
-    flex-direction: column;
-  }
   .portfolio-title {
     margin-bottom: 16px;
+  }
+  .experience-container-wrapper {
+    row-gap: 40px;
   }
 }
 @media (max-width: 650px) {
@@ -566,6 +583,10 @@ body {
 @media (max-width: 420px) {
   .about-info-buttons {
     column-gap: 8px;
+  }
+  .experience-container-top {
+    flex-direction: column;
+    align-items: start;
   }
 }
 @media (max-width: 400px) {
