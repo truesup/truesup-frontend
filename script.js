@@ -54,16 +54,21 @@ function updateHeadingText() {
   }
 }
 updateHeadingText();
-
 window.addEventListener('resize', updateHeadingText);
 
 // emailJS
 document.addEventListener('DOMContentLoaded', () => {
-  emailjs.init('nrnOequk6o8K9Xxrp');
+  emailjs.init('user_nrnOequk6o8K9Xxrp');
 
   const form = document.getElementById('contactForm');
+  const formBtn = document.querySelector('.form-button');
+  const loader = document.querySelector('.loader');
+
   form.addEventListener('submit', (event) => {
     event.preventDefault();
+
+    formBtn.classList.add('visually-hidden');
+    loader.classList.remove('visually-hidden');
 
     const params = {
       name: document.getElementById('name').value,
@@ -76,9 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
       () => {
         alert('Message delievered');
         form.reset();
+        formBtn.classList.remove('visually-hidden');
+        loader.classList.add('visually-hidden');
       },
       () => {
-        alert('An error occured');
+        alert(`Sorry, your message wasn't delievered :(
+An error occured!`);
+        formBtn.classList.remove('visually-hidden');
+        loader.classList.add('visually-hidden');
       }
     );
   });

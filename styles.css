@@ -108,6 +108,10 @@ body {
 }
 
 /* common styles */
+.visually-hidden {
+  display: none;
+}
+
 .container {
   display: flex;
   align-items: flex-start;
@@ -253,7 +257,7 @@ body {
   padding-inline: 60px;
 }
 .header-logo {
-  color: tomato;
+  color: var(--color-medium-dark);
   font-size: 24px;
   line-height: 1.5;
 }
@@ -478,6 +482,33 @@ textarea {
 .form-button:hover {
   cursor: pointer;
   scale: 1.03;
+}
+
+.footer {
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.loader-wrapper {
+  max-height: 44px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 6px solid var(--color-hard-dark);
+  border-right-color: var(--color-light);
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 @media (max-width: 1350px) {
