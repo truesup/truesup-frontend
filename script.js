@@ -41,13 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // experience section header change
 function updateHeadingText() {
-  const heading = document.querySelector('.experience-title');
+  const headingExperience = document.querySelector('.experience-title');
+  const headingContact = document.querySelector('.contact-title');
   const screenWidth = window.innerWidth;
 
   if (screenWidth <= 1279 && screenWidth > 1200) {
-    heading.textContent = 'EXPERIENCE';
+    headingExperience.textContent = 'EXPERIENCE';
+    headingContact.textContent = 'CONNECT';
   } else {
-    heading.textContent = 'MY EXPERIENCE';
+    headingExperience.textContent = 'MY EXPERIENCE';
+    headingContact.textContent = "LET'S CONNECT";
   }
 }
 updateHeadingText();
