@@ -44,9 +44,11 @@
       </nav>
     </header>
 
-    <section class="about container container-landing">
-      <h2 class="about-title section-title section-title-l">ABOUT ME</h2>
-      <div class="about-info">
+    <section class="about container">
+      <div class="container-left">
+        <h2 class="about-title section-title section-title-l">ABOUT ME</h2>
+      </div>
+      <div class="container-right about-info">
         <p class="about-info-main section-text section-text-xl">
           I am a junior front-end developer. <br />
           Has Mechanical Engineering background.
@@ -99,113 +101,116 @@
 
     <hr class="section-divider" id="portfolio" />
 
-    <section class="portfolio container container-section">
-      <h3 class="portfolio-title section-title section-title-m">PORTFOLIO</h3>
-      <p class="portfolio-text section-text section-text-l">
-        Feel free to explore my portfolio, but keep in mind that I'm still a
-        beginner.
-      </p>
+    <section class="portfolio container">
+      <div class="container-left">
+        <h3 class="portfolio-title section-title section-title-m">PORTFOLIO</h3>
+      </div>
+      <div class="container-right">
+        <p class="portfolio-text section-text section-text-l">
+          Feel free to explore my portfolio, but keep in mind that I'm still a
+          beginner.
+        </p>
+        <div class="portfolio-cards-container">
+          <div class="portfolio-card-wrapper">
+            <div class="flip-card-inner">
+              <div class="card-front">
+                <p class="section-text">Rock Paper Scissors Game</p>
+              </div>
+              <div class="card-back">
+                <img
+                  src="./imgs/portfolio/rps-screen.jpg"
+                  alt="rock paper scissors"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card-wrapper">
+            <div class="flip-card-inner">
+              <div class="card-front">
+                <p class="section-text">Memory Card Game</p>
+              </div>
+              <div class="card-back">
+                <img
+                  src="./imgs/portfolio/card-game-screen.jpg"
+                  alt="memory game"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card-wrapper">
+            <div class="flip-card-inner">
+              <div class="card-front">
+                <p class="section-text">The Snake Game</p>
+              </div>
+              <div class="card-back">
+                <img
+                  src="./imgs/portfolio/snake-screen.jpg"
+                  alt="snake game"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card-wrapper">
+            <div class="flip-card-inner">
+              <div class="card-front">
+                <p class="section-text">Digital Clock</p>
+              </div>
+              <div class="card-back">
+                <img
+                  src="./imgs/portfolio/clock-screen.jpg"
+                  alt="digital clock"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card-wrapper">
+            <div class="flip-card-inner">
+              <div class="card-front">
+                <p class="section-text">Random Image Gallery</p>
+              </div>
+              <div class="card-back">
+                <img
+                  src="./imgs/portfolio/random-image-screen.jpg"
+                  alt="image gallery"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card-wrapper">
+            <div class="flip-card-inner">
+              <div class="card-front">
+                <p class="section-text">To Do App</p>
+              </div>
+              <div class="card-back">
+                <img
+                  src="./imgs/portfolio/todo-screen.jpg"
+                  alt="to do app"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <div class="portfolio-cards-container">
-      <div class="portfolio-card-wrapper">
-        <div class="flip-card-inner">
-          <div class="card-front">
-            <p class="section-text">Rock Paper Scissors Game</p>
-          </div>
-          <div class="card-back">
-            <img
-              src="./imgs/portfolio/rps-screen.jpg"
-              alt="rock paper scissors"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card-wrapper">
-        <div class="flip-card-inner">
-          <div class="card-front">
-            <p class="section-text">Memory Card Game</p>
-          </div>
-          <div class="card-back">
-            <img
-              src="./imgs/portfolio/card-game-screen.jpg"
-              alt="memory game"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card-wrapper">
-        <div class="flip-card-inner">
-          <div class="card-front">
-            <p class="section-text">The Snake Game</p>
-          </div>
-          <div class="card-back">
-            <img
-              src="./imgs/portfolio/snake-screen.jpg"
-              alt="snake game"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card-wrapper">
-        <div class="flip-card-inner">
-          <div class="card-front">
-            <p class="section-text">Digital Clock</p>
-          </div>
-          <div class="card-back">
-            <img
-              src="./imgs/portfolio/clock-screen.jpg"
-              alt="digital clock"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card-wrapper">
-        <div class="flip-card-inner">
-          <div class="card-front">
-            <p class="section-text">Random Image Gallery</p>
-          </div>
-          <div class="card-back">
-            <img
-              src="./imgs/portfolio/random-image-screen.jpg"
-              alt="image gallery"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card-wrapper">
-        <div class="flip-card-inner">
-          <div class="card-front">
-            <p class="section-text">To Do App</p>
-          </div>
-          <div class="card-back">
-            <img
-              src="./imgs/portfolio/todo-screen.jpg"
-              alt="to do app"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
 
     <hr class="section-divider" id="skills" />
 
-    <section class="skills container container-section">
-      <h3 class="skills-title section-title section-title-m">
-        MY CAPABILITIES
-      </h3>
-      <div class="skills-container">
+    <section class="skills container">
+      <div class="container-left">
+        <h3 class="skills-title section-title section-title-m">CAPABILITIES</h3>
+      </div>
+      <div class="container-right skills-container">
         <p class="skills-container-text section-text section-text-m">
           Hard skills:
         </p>
@@ -282,11 +287,13 @@
 
     <hr class="section-divider" id="experience" />
 
-    <section class="experience container container-section">
-      <h3 class="experience-title section-title section-title-m">
-        MY EXPERIENCE
-      </h3>
-      <div class="experience-container-wrapper">
+    <section class="experience container">
+      <div class="container-left">
+        <h3 class="experience-title section-title section-title-m">
+          MY EXPERIENCE
+        </h3>
+      </div>
+      <div class="container-right experience-container-wrapper">
         <div class="experience-container">
           <div class="experience-container-top">
             <p class="section-text section-text-l">Freelance Developer</p>
@@ -344,7 +351,7 @@
 
     <hr class="section-divider" id="contact" />
 
-    <section class="contact container container-section">
+    <section class="contact container">
       <div class="contact-left-container">
         <h3 class="contact-title section-title section-title-m">
           LET'S CONNECT
@@ -363,7 +370,7 @@
         </p>
         <div class="contact-left-icons"></div>
       </div>
-      <div class="contact-right-container">
+      <div class="container-right contact-right-container">
         <form id="contactForm">
           <label for="name" class="section-text section-text-s">Name</label>
           <input type="text" id="name" name="name" required />

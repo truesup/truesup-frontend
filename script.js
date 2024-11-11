@@ -39,6 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// experience section header change
+function updateHeadingText() {
+  const heading = document.querySelector('.experience-title');
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 1279 && screenWidth > 1200) {
+    heading.textContent = 'EXPERIENCE';
+  } else {
+    heading.textContent = 'MY EXPERIENCE';
+  }
+}
+updateHeadingText();
+
+window.addEventListener('resize', updateHeadingText);
+
 // emailJS
 document.addEventListener('DOMContentLoaded', () => {
   emailjs.init('nrnOequk6o8K9Xxrp');
