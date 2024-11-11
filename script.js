@@ -1,9 +1,3 @@
-// linkedIn is not working yet
-const linkedInBtn = document.querySelector('.linkedin-button');
-linkedInBtn.addEventListener('click', () => {
-  alert('it`s not working yet, sorry');
-});
-
 // header menu
 const menuLinks = document.querySelectorAll('.header-menu-link');
 
@@ -42,5 +36,32 @@ document.addEventListener('DOMContentLoaded', () => {
   burgerMenuBtn.addEventListener('click', () => {
     menuList.classList.toggle('open');
     burgerMenuBtn.classList.toggle('open');
+  });
+});
+
+// emailJS
+document.addEventListener('DOMContentLoaded', () => {
+  emailjs.init('nrnOequk6o8K9Xxrp');
+
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const params = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value,
+    };
+
+    emailjs.send('service_wtsaubt', 'template_1c8f5th', params).then(
+      () => {
+        alert('Message delievered');
+        form.reset();
+      },
+      () => {
+        alert('An error occured');
+      }
+    );
   });
 });

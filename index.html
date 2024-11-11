@@ -342,10 +342,56 @@
       </div>
     </section>
 
-    <hr class="section-divider" id="experience" />
+    <hr class="section-divider" id="contact" />
 
-    <section class="contact" id="contact"></section>
+    <section class="contact container container-section">
+      <div class="contact-left-container">
+        <h3 class="contact-title section-title section-title-m">
+          LET'S CONNECT
+        </h3>
+        <p class="contact-left-container-first-p section-text section-text-m">
+          Say hello at
+          <a href="mailto:merekin33@gmail.com">merekin33@gmail.com</a>
+        </p>
+        <p class="contact-left-container-second-p section-text section-text-m">
+          For more info, here's my
+          <a
+            href="./resume/Merekin-Resume-EN.pdf"
+            download="Merekin-Pavel-CV.pdf"
+            >resume</a
+          >
+        </p>
+        <div class="contact-left-icons"></div>
+      </div>
+      <div class="contact-right-container">
+        <form id="contactForm">
+          <label for="name" class="section-text section-text-s">Name</label>
+          <input type="text" id="name" name="name" required />
 
+          <label for="email" class="section-text section-text-s">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="subject" class="section-text section-text-s"
+            >Subject</label
+          >
+          <input type="text" id="subject" name="subject" required />
+
+          <label for="message" class="section-text section-text-s"
+            >Message</label
+          >
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button
+            type="submit"
+            class="section-text button section-text-button button-btn form-button"
+          >
+            SUBMIT
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
