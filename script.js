@@ -58,7 +58,7 @@ window.addEventListener('resize', updateHeadingText);
 
 // emailJS
 document.addEventListener('DOMContentLoaded', () => {
-  emailjs.init('user_nrnOequk6o8K9Xxrp');
+  emailjs.init('nrnOequk6o8K9Xxrp');
 
   const form = document.getElementById('contactForm');
   const formBtn = document.querySelector('.form-button');
