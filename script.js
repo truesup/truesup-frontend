@@ -93,3 +93,27 @@ An error occured!`);
     );
   });
 });
+
+// scroll animation (not available for mobile and laptop)
+document.addEventListener('DOMContentLoaded', function () {
+  const isMobile = window.innerWidth <= 599;
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+  function animateOnScroll() {
+    animatedElements.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top;
+      const viewportHeight = window.innerHeight;
+
+      if (elementTop < viewportHeight - 100) {
+        element.classList.add('visible');
+      }
+    });
+  }
+
+  if (!isMobile) {
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll();
+  } else {
+    animatedElements.forEach((element) => element.classList.add('visible'));
+  }
+});
