@@ -206,7 +206,7 @@ body {
 .button-icon {
   border-radius: var(--border-radius-icons);
   background-color: var(--color-hard-dark);
-  height: 42px;
+  height: 44px;
   aspect-ratio: 1;
   border: none;
   display: flex;
@@ -511,6 +511,7 @@ textarea {
   }
 }
 
+/* media */
 @media (max-width: 1350px) {
   .about {
     padding-top: 220px;
@@ -629,5 +630,35 @@ textarea {
 @media (max-width: 340px) {
   .about-info-buttons {
     column-gap: 2px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header-menu-list {
+    column-gap: 40px;
+  }
+}
+@media (min-width: 1500px) {
+  .container-right {
+    max-width: 700px;
+  }
+  .about-info {
+    max-width: 800px;
+  }
+  .portfolio-cards-container {
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    padding-inline: 200px;
+  }
+  .about {
+    padding-top: 320px;
+  }
+}
+@media (min-width: 1800px) {
+  .container {
+    padding-inline: 300px;
   }
 }
