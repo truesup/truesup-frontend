@@ -117,3 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
     animatedElements.forEach((element) => element.classList.add('visible'));
   }
 });
+
+import './index.html';
+import './styles.css';
