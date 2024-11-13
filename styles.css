@@ -350,6 +350,10 @@ body {
 .github-button:hover {
   scale: 1.03;
 }
+.linkedin-button,
+.github-button {
+  padding-inline: 0;
+}
 
 .portfolio-cards-container {
   display: flex;
